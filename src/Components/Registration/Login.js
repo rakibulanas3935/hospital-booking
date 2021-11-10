@@ -1,16 +1,23 @@
 import React from "react";
-import logo from "../Images/kinima_logo 1.png";
+import { Link } from "react-router-dom";
+import logo from "../Images/kinima_logo.svg";
 import "./login.css";
 const Login = () => {
+  // Cancel funtion default value
   const handleClick = (e) => {
     e.preventDefault();
     console.log("clicked");
   };
   return (
     <div className="login-box">
+      {/* Logo image */}
+
       <div className="img">
         <img src={logo} alt="" width="232px" height="90px" className="logo" />
       </div>
+
+      {/* Login Form  */}
+
       <form onSubmit={handleClick}>
         <div className="username">
           <p className="title">Username</p>
@@ -32,14 +39,20 @@ const Login = () => {
             id=""
           />
         </div>
-        <div className="login-btn">
-          <button type="submit" className="submit-btn">
-            Submit
-          </button>
+        <div className="btn">
+          <Link to="/step1">
+            <button type="submit" className="submit-btn">
+              Submit
+            </button>
+          </Link>
         </div>
         <div className="final-text">
-          <p className="forget">Forget password?</p>
-          <p className="new-account">New Account</p>
+          <Link to="/forget">
+            <p className="forget">Forget password?</p>
+          </Link>
+          <Link to="/register">
+            <p className="new-account">New Account</p>
+          </Link>
         </div>
       </form>
     </div>

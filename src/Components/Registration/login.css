@@ -1,3 +1,4 @@
+/* Login box design  */
 .login-box {
   background-color: rgb(255, 255, 255);
   width: 360px;
@@ -19,6 +20,9 @@
   width: 86px;
   height: 15px;
 }
+
+/* input design  */
+
 .input-field {
   width: 100%;
   margin-bottom: 13px;
@@ -53,6 +57,9 @@ input[type="password"] {
   margin-bottom: 20px;
   cursor: pointer;
 }
+
+/* Register and forget password section */
+
 .final-text {
   text-align: center;
 }
@@ -68,6 +75,8 @@ input[type="password"] {
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* place holder design  */
 ::-webkit-input-placeholder {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.733);
