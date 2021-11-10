@@ -1,0 +1,75 @@
+.login-box {
+  background-color: rgb(255, 255, 255);
+  width: 360px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.img {
+  text-align: center;
+  margin-bottom: 41px;
+}
+.title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #413e3e;
+  margin-bottom: 13px;
+  width: 86px;
+  height: 15px;
+}
+.input-field {
+  width: 100%;
+  margin-bottom: 13px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.login-box input[type="text"],
+input[type="password"] {
+  border: none;
+  border-bottom: 1px solid rgb(29, 18, 18);
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: rgb(63, 52, 52);
+  font-size: 16px;
+}
+.username,
+.password {
+  margin-bottom: 48px;
+}
+.login-btn {
+  text-align: center;
+}
+.submit-btn {
+  width: 148px;
+  height: 52px;
+  outline: none;
+  border: none;
+  background-color: #0f8c8c;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.final-text {
+  text-align: center;
+}
+.forget {
+  font-size: 14px;
+  color: #0e5959;
+  text-decoration: underline;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+.new-account {
+  color: #04d99d;
+  text-decoration: underline;
+  cursor: pointer;
+}
+::-webkit-input-placeholder {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.733);
+  opacity: 0.3;
+}
