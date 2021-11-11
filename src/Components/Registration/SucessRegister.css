@@ -20,6 +20,9 @@
   font-weight: 700;
   margin-bottom: 28px;
 }
+.reset-title {
+  text-align: center;
+}
 .subtitle {
   font-weight: 400;
   font-size: 14px;
