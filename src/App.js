@@ -6,6 +6,7 @@ import Step1 from "./Components/Booking/Step1";
 import Step2 from "./Components/Booking/Step2";
 import Login from "./Components/Registration/Login";
 import Newaccount from "./Components/Registration/Newaccount";
+import SucessRegister from "./Components/Registration/SucessRegister";
 
 //Starting part
 
@@ -33,6 +34,9 @@ function App() {
           {/* Declaring step2 marketing page  */}
           <Route path="/register">
             <Newaccount></Newaccount>
+          </Route>
+          <Route path="/sucessregister">
+            <SucessRegister></SucessRegister>
           </Route>
         </Switch>
       </Router>

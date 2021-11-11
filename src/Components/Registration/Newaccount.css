@@ -1,0 +1,56 @@
+/* Logo position start */
+
+.newaccount-logo {
+  margin-top: 38px;
+  margin-left: 30px;
+}
+.logo-img {
+  width: 232px;
+  height: 90px;
+}
+
+/* Logo position end */
+
+.newaccount-from {
+  background-color: rgb(255, 255, 255);
+  width: 360px;
+  padding: 10px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile-upload {
+  text-align: center;
+}
+
+.firstname,
+.lastname,
+.email,
+.password,
+.doctor-code {
+  margin-bottom: 0px;
+}
+.title-register {
+  font-size: 14px;
+  font-weight: 400;
+  color: #413e3e;
+  margin-bottom: 0px;
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 13px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.newaccount input[type="text"],
+input[type="password"] {
+  border: none;
+  border-bottom: 1px solid rgb(29, 18, 18);
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: rgb(63, 52, 52);
+  font-size: 16px;
+}

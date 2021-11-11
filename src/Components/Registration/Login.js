@@ -39,7 +39,7 @@ const Login = () => {
             id=""
           />
         </div>
-        <div className="btn">
+        <div className="login-btn">
           <Link to="/step1">
             <button type="submit" className="submit-btn">
               Submit
