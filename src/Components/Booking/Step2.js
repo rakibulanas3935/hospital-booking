@@ -18,7 +18,7 @@ const Step2 = () => {
         </p>
       </div>
       <div className="login-btn">
-        <Link to="/makebooking">
+        <Link to="/physio">
           <button type="submit" className="submit-btn">
             Next
           </button>
