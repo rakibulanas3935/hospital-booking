@@ -4,7 +4,7 @@ import "./Step5.css";
 const Step5 = () => {
   return (
     <div className="container-step5">
-      <di className="container-text">ARE THESE DETAILS CORRECT?</di>
+      <div className="container-text">ARE THESE DETAILS CORRECT?</div>
       <p className="booking-name">Friday 22nd October</p>
       <p className="booking-name">3:00 PM</p>
       <p className="booking-name">Henry Blackburn</p>

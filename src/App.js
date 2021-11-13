@@ -16,6 +16,7 @@ import ResetSucessful from "./Components/Registration/ResetSucessful";
 import SucessRegister from "./Components/Registration/SucessRegister";
 import Shared from "./Components/Shared/Shared";
 import Step5 from "./Components/Booking/Step5";
+import Confirmation from "./Components/Booking/Confirmation";
 
 //Starting part
 
@@ -96,7 +97,7 @@ function App() {
           {/* Confirmation part */}
           <Route path="/confirmation">
             <Shared></Shared>
-            <Step5></Step5>
+            <Confirmation></Confirmation>
           </Route>
         </Switch>
       </Router>
