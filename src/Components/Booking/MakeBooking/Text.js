@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 
+//show range slider value
 const marks = [
   {
     value: 1,
@@ -50,6 +51,7 @@ function valuetext(value) {
 }
 
 export default function DiscreteSliderMarks() {
+  // get value
   const [value, getValue] = React.useState(1);
   const handeValue = (e) => {
     const ranger = e.target.value;

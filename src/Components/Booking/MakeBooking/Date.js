@@ -8,12 +8,16 @@ import { Link } from "react-router-dom";
 import "./Date.css";
 import Step5 from "../Step5";
 const DatePicker = () => {
+  //Storing date value
+
   const [date, setDate] = React.useState(new Date());
+  //handle onchange
   const handleDateChange = (e) => {
     setDate(e);
   };
   return (
     <div className="container-date">
+      {/* call the component  */}
       <div>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <StaticDatePicker
@@ -23,9 +27,11 @@ const DatePicker = () => {
           />
         </LocalizationProvider>
         {console.log(date.toDateString())}
+        {/* showing value dynamically  */}
         <h3>{date.toDateString()}</h3>
       </div>
 
+      {/* button  */}
       <div className="login-btn">
         <Link to="/time">
           <button type="submit" className="submit-btn">

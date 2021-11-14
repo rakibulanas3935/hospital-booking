@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import "./Time.css";
 import img from "../../Images/tick.svg";
 const Time = () => {
+  // get time value
+
   const [time, setTime] = useState("Pick Time");
   const handleTime = (e) => {
     setTime(e.target.value);
   };
+  //check the time.
   console.log(time);
   return (
     <div className="container-time">
@@ -17,6 +20,8 @@ const Time = () => {
       <div className="container-grid">
         <div className="container-text">Morning</div>
         <div className="container-text">Afternoon</div>
+
+        {/* onclick event fro btn */}
         <div className="btn-time">
           <input type="submit" value="7:00 AM" onClick={handleTime} />
         </div>
@@ -49,6 +54,7 @@ const Time = () => {
         </div>
       </div>
 
+      {/* show time dynamically  */}
       <div className="show-value">
         <img src={img} alt="" height="50px" width="50px" />
         <h2 className="picktime">{time}</h2>
