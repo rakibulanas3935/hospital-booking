@@ -24,3 +24,12 @@
   font-size: 18px;
   margin-bottom: 31px;
 }
+.title-checkliist {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 23px;
+}
+.container-checkbox-list {
+  margin-bottom: 22px;
+  font-size: 14px;
+}
