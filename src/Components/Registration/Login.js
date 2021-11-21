@@ -1,12 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../Images/kinima_logo.svg";
 import "./login.css";
 const Login = () => {
+  const [loginData, setLoginData] = useState({});
+  //getting value from email and password field
+  const handleOnChange = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+  };
+
+  //showing value
+  // console.log(loginData);
   // Cancel funtion default value
   const handleClick = (e) => {
     e.preventDefault();
     console.log("clicked");
+    alert("from submited");
   };
   return (
     <div className="header">
@@ -24,10 +37,12 @@ const Login = () => {
             <p className="title">Username</p>
             <input
               type="text"
-              name=""
+              name="email"
               className="input-field"
               placeholder="john.doe@gmail.com"
               id=""
+              onChange={handleOnChange}
+              required
             />
           </div>
           <div className="password">
@@ -35,27 +50,28 @@ const Login = () => {
             <input
               type="password"
               className="input-field"
-              name=""
+              name="password"
               placeholder="****"
+              onChange={handleOnChange}
               id=""
             />
           </div>
           <div className="login-btn">
-            <Link to="/step1">
+            <NavLink to="/step1">
               <button type="submit" className="submit-btn">
                 Submit
               </button>
-            </Link>
-          </div>
-          <div className="final-text">
-            <Link to="/forgetpassword">
-              <p className="forget">Forgot password?</p>
-            </Link>
-            <Link to="/register">
-              <p className="new-account">New Account</p>
-            </Link>
+            </NavLink>
           </div>
         </form>
+        <div className="final-text">
+          <Link to="/forgetpassword">
+            <p className="forget">Forgot password?</p>
+          </Link>
+          <Link to="/register">
+            <p className="new-account">New Account</p>
+          </Link>
+        </div>
       </div>
     </div>
   );

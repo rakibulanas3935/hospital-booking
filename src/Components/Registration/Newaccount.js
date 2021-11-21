@@ -1,12 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "./kinima_logo.svg";
 import Profile from "./Vector.svg";
 import "./Newaccount.css";
 const Newaccount = () => {
+  const [registerData, setRegisterData] = useState({});
+  //getting value from newregister
+  const handleOnChange = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newRegisterData = { ...registerData };
+    newRegisterData[field] = value;
+    setRegisterData(newRegisterData);
+  };
+
+  const { profile } = registerData;
+  console.log(registerData);
+  console.log(profile);
+
+  //handle click in from
   const handleClick = (e) => {
+    if (registerData.password1 !== registerData.password2) {
+      alert("password didn't match");
+      return;
+    }
     e.preventDefault();
-    console.log("clicked");
   };
 
   return (
@@ -26,11 +44,14 @@ const Newaccount = () => {
             <div className="upload-picture">
               <input
                 type="file"
-                name=""
+                name="profile"
                 placeholder="upload"
-                className="upload file"
+                className="upload-file"
                 id=""
+                onChange={handleOnChange}
+                accept="image/*"
               />
+              <label for="file">UPLOAD</label>
             </div>
           </div>
 
@@ -38,9 +59,11 @@ const Newaccount = () => {
             <p className="title-register">First Name</p>
             <input
               type="text"
-              name=""
+              name="firstName"
               className="input-field"
               placeholder="Jhon"
+              required
+              onChange={handleOnChange}
               id=""
             />
           </div>
@@ -48,20 +71,24 @@ const Newaccount = () => {
             <p className="title-register">Last Name</p>
             <input
               type="text"
-              name=""
+              name="lastName"
               className="input-field"
               placeholder="Doe"
+              required
+              onChange={handleOnChange}
               id=""
             />
           </div>
           <div className="email">
             <p className="title-register">Email</p>
             <input
-              type="text"
-              name=""
+              type="email"
+              name="eamil"
               className="input-field"
               placeholder="john.doe@gmail.com"
               id=""
+              onChange={handleOnChange}
+              required
             />
           </div>
           <div className="password">
@@ -69,9 +96,23 @@ const Newaccount = () => {
             <input
               type="password"
               className="input-field"
-              name=""
+              name="password1"
               placeholder="****"
               id=""
+              onChange={handleOnChange}
+              required
+            />
+          </div>
+          <div className="password">
+            <p className="title-register">Confirm Password</p>
+            <input
+              type="password"
+              className="input-field"
+              name="password2"
+              placeholder="****"
+              onChange={handleOnChange}
+              id=""
+              required
             />
           </div>
           <div className="doctor-code">
@@ -81,17 +122,18 @@ const Newaccount = () => {
             <input
               type="password"
               className="input-field"
-              name=""
+              name="physioCode"
               placeholder="****"
+              onChange={handleOnChange}
               id=""
             />
           </div>
           <div className="login-btn">
-            <Link to="/sucessregister">
+            <NavLink to="/sucessregister">
               <button type="submit" className="submit-btn">
                 Submit
               </button>
-            </Link>
+            </NavLink>
           </div>
         </form>
       </div>
