@@ -2,8 +2,11 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import setting from "./el_cog.svg";
+import { Link } from "react-router-dom";
+import useAuth from "../Firebase/Hooks/useAuth";
 
 export default function TemporaryDrawer() {
+  const { user, logout } = useAuth();
   const [state, setState] = React.useState({
     right: false,
   });
@@ -26,13 +29,36 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      <div className="icon">Anas</div>
-      <div className="icon">Anas</div>
-      <div className="icon">Anas</div>
-      <div className="icon">Anas</div>
-      <div className="icon">Anas</div>
-      <div className="icon">Anas</div>
-      <div className="icon">Anas</div>
+      <div className="drawer-right">
+        <div className="profile drawer">
+          <i class="fas fa-user"></i>
+          <Link to="/profile">Profile</Link>
+        </div>
+        <div className="update-profile drawer">
+          <i class="fas fa-user-edit"></i>
+          <Link to="/updateprofile">Edit profile</Link>
+        </div>
+        <div className="booking drawer">
+          <i class="fas fa-clipboard-check"></i>
+          <Link to="/step1">Make booking</Link>
+        </div>
+        <div className="booking drawer">
+          <i class="fas fa-ban"></i>
+          <Link to="/makebooking">Cancel booking</Link>
+        </div>
+        {/* condition checking */}
+        {user?.email ? (
+          <div className="dashboard drawer">
+            <i class="fas fa-sign-in-alt"></i>
+            <Link to="/makebooking">Logout</Link>
+          </div>
+        ) : (
+          <div className="dashboard drawer">
+            <i class="fas fa-sign-in-alt"></i>
+            <Link to="/login">Login</Link>
+          </div>
+        )}
+      </div>
     </Box>
   );
 

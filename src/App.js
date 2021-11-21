@@ -18,6 +18,7 @@ import Shared from "./Components/Shared/Shared";
 import Step5 from "./Components/Booking/Step5";
 import Confirmation from "./Components/Booking/Confirmation";
 import Authprovidor from "./Components/Context/Authprovider";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 //Starting part
 
@@ -53,10 +54,10 @@ function App() {
               <ResetSucessful></ResetSucessful>
             </Route>
             {/* Step1 booking */}
-            <Route path="/step1">
+            <PrivateRoute path="/step1">
               <Shared></Shared>
               <Step1></Step1>
-            </Route>
+            </PrivateRoute>
             {/* Step2 booking */}
             <Route path="/step2">
               <Shared></Shared>
