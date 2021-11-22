@@ -19,6 +19,10 @@ import Step5 from "./Components/Booking/Step5";
 import Confirmation from "./Components/Booking/Confirmation";
 import Authprovidor from "./Components/Context/Authprovider";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Cancelbooking from "./Components/Booking/CancelBooking/Cancelbooking";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import CancelStep1 from "./Components/Booking/CancelBooking/CancelStep1";
+import SuccessfulCancelation from "./Components/Booking/CancelBooking/SuccessfulCancelation";
 
 //Starting part
 
@@ -101,6 +105,24 @@ function App() {
             <Route path="/confirmation">
               <Shared></Shared>
               <Confirmation></Confirmation>
+            </Route>
+            {/* cancel booking part */}
+            <Route path="/cancelbooking">
+              <Shared></Shared>
+              <Cancelbooking></Cancelbooking>
+            </Route>
+            {/* client dashboard */}
+            <Route path="/clientdashboard">
+              <Shared></Shared>
+              <Dashboard></Dashboard>
+            </Route>
+            <Route path="/cancel-step1">
+              <Shared></Shared>
+              <CancelStep1></CancelStep1>
+            </Route>
+            <Route path="/cancelsucessful">
+              <Shared></Shared>
+              <SuccessfulCancelation></SuccessfulCancelation>
             </Route>
           </Switch>
         </Router>

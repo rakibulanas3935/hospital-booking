@@ -6,3 +6,19 @@
   margin: 0 auto;
   padding: 2rem;
 }
+.drawer-right {
+  padding: 2rem;
+}
+.drawer {
+  display: flex;
+  padding: 10px 30px;
+  align-items: center;
+}
+.drawer .Link {
+  text-decoration: none;
+  color: rgb(4, 105, 105);
+  padding: 0px 30px;
+}
+.drawer-icon {
+  cursor: pointer;
+}

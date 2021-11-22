@@ -138,6 +138,13 @@ const Newaccount = () => {
                 Submit
               </button>
             </div>
+            <div className="login-btn">
+              <NavLink to="/sucessregister">
+                <button type="submit" className="submit-btn">
+                  Login
+                </button>
+              </NavLink>
+            </div>
             {isLoading && <CircularProgress />}
             {user?.email && (
               // <Alert severity="success">
